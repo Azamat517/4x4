@@ -24,6 +24,9 @@ export class ModelService {
     const models = await this.modelRepo.find({
       relations: ['carModel'],
     });
+    models.forEach(car => {
+      car.carModel.sort((a, b) => a.id - b.id);
+    });
     return models;
 
   }
