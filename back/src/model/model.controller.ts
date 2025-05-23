@@ -22,10 +22,7 @@ export class ModelController {
     return this.modelService.findOne(+id);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateModelDto: UpdateModelDto) {
-    return this.modelService.update(+id, updateModelDto);
-  }
+
 
   @Delete(':id')
   remove(@Param('id') id: string) {
