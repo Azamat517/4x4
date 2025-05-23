@@ -1,6 +1,7 @@
 import 'sass-reset'
 import './sass/header.sass'
 import './sass/body.sass'
+import './sass/cars.sass'
 import { NavLink } from 'react-router-dom'
 import Body from './page/body'
 
