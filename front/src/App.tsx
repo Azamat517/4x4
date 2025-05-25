@@ -4,6 +4,7 @@ import './sass/body.sass'
 import './sass/cars.sass'
 import { NavLink } from 'react-router-dom'
 import Body from './page/body'
+import './sass/tuning.sass'
 
 
 function App() {
