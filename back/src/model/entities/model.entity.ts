@@ -11,7 +11,6 @@ export class Model {
     @Column()
     name_model: string
 
-
     @OneToMany(() => Car, car => car.models)
     carModel!: Car[];
 }

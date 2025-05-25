@@ -5,6 +5,8 @@ import { ModelModule } from './model/model.module';
 import { Model } from './model/entities/model.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Car } from './cars/entities/car.entity';
+import { TuningModule } from './tuning/tuning.module';
+import { Tuning } from './tuning/entities/tuning.entity';
 
 @Module({
   imports: [
@@ -15,13 +17,13 @@ import { Car } from './cars/entities/car.entity';
       username: 'root',
       password: 'Aza517097',
       database: '4x4',
-      entities: [Model, Car],
+      entities: [Model, Car, Tuning],
       synchronize: true,
       logging: true,
       autoLoadEntities: true
     }),
 
-    CarsModule, ModelModule],
+    CarsModule, ModelModule, TuningModule],
   controllers: [],
   providers: [],
 })
