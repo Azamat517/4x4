@@ -1,15 +1,81 @@
 .tuning
-    width: 36vh
-    height: 3rem
-    display: flex
-    justify-content: center
+    width: 50vh
+    height: 100vh
+    // background-color: yellow
+    position: absolute
     align-items: center
-    font-weight: bold
-    font-family: Arial, Helvetica, sans-serif
-    font-size: 2vh
+    z-index: 1
+    overflow-y: auto
+    &::-webkit-scrollbar
+        width: 0
+    @media (max-width: 1000px)
+        width: 100vh
+        position: relative
+        height: auto
+    @media (max-width: 665px)
+        width: 89vw 
+    &__name
+        width: 45vh
+        height: 3rem
+        border-radius: 20px
+        margin-left: 1rem
+        display: flex
+        z-index: 0
+        justify-content: center
+        align-items: center
+        font-weight: bold
+        font-family: Arial, Helvetica, sans-serif
+        font-size: 3vh
+        @media (max-width: 1000px)
+            width: 45vw
+        @media (max-width: 650px) 
+            font-size: 4vw
+            height: 4vw   
     &__box
-        width: 36vh
-        height: 80vh
-        background-color: yellow
+        @media (max-width: 1000px)
+            display: flex
+            justify-content: center
+            height: auto
+            flex-wrap: wrap
+    &__box__box
+        width: 45vh
+        height: 12rem
+        background-color: green
+        margin: 1rem
+        border-radius: 20px
+        @media (max-width: 1000px)
+            width: 20vh
+            height: 9rem
+        @media (max-width: 650px)
+            width: 17vh
+            height: 8rem
+             
+    &__box__box__image  
+        width: 45vh
+        height: 12rem 
+        object-fit: cover
+        border-radius: 20px
         position: absolute
+        z-index: 0 
+        @media (max-width: 1000px)
+            width: 20vh
+            height: 9rem
+        @media (max-width: 650px)
+            width: 17vh
+            height: 8rem
+    &__box__box__name
+        position: relative
         z-index: 1
+        top: 8rem
+        margin-left: 1rem
+        color: white
+        font-family: Arial, Helvetica, sans-serif
+        font-weight: bold
+        font-size: 2vh  
+        @media (max-width: 1000px)
+            top: 5rem  
+            font-size: 1.8vh 
+        
+
+
+   

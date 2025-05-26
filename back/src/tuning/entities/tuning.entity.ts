@@ -12,7 +12,7 @@ export class Tuning {
     @Column()
     image_tunning: string
 
-    @Column()
+    @Column({ length: 5000 })
     description_tuning: string
 
 }
