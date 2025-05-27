@@ -45,12 +45,12 @@ const Body = () => {
                 </div>
                 <div className="cars">{cars.carInfo.map((i, index) => (
                     <button key={index} className="cars__box"
-                        onClick={() => navigate('/Model', { state: i })} >{i.name_model}
+                        onClick={() => navigate('/CarModel', { state: i })} >{i.name_model}
                         <img className="cars__box__image" src={i.image_model} alt="image" />
                     </button>
                 ))}</div>
             </div>
-        
+
         </div>
 
     )
