@@ -50,7 +50,7 @@ const Body = () => {
                     </button>
                 ))}</div>
             </div>
-            <div className="footer">sadsadasd</div>
+        
         </div>
 
     )

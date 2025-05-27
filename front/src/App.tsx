@@ -26,8 +26,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Body />} />
           <Route path="/Model" element={<Model />} />
-  
+
         </Routes>
+        {/* <div className="footer">sadsadasd</div> */}
       </div>
     </>
   )
