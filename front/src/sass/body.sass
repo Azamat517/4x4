@@ -27,11 +27,27 @@
         height: 56vh
         border-radius: 20px
         object-fit: contain
+        position: relative
+        z-index: 0
         @media (max-width: 665px)
             width: 89vw
             height: 50vw
     &__box__home__name
-        position: relative
-        z-index: 0     
+        position: absolute
+        z-index: 22   
+        width: 15rem
+        height: 12rem
+        display: flex
+        justify-content: center
+        align-items: end
+        font-weight: bold
+        font-family: Arial, Helvetica, sans-serif
+        font-size: 6rem
+        color: white
+        @media (max-width: 665px)
+            font-size: 14vw
+            width: 40vw
+            height: 30vw
+
         
             

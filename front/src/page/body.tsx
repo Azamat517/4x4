@@ -26,7 +26,10 @@ const Body = () => {
             <div className="body__box">
                 <div className="body__box__home">
                     <div >
+                        <div className="body__box__home__name">4X4</div>
+
                         <img className="body__box__home__image" src={'src/assets/1.jpg'} alt="image" />
+
                     </div>
                     <div>
                         <div className="tuning">
