@@ -7,6 +7,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Car } from './cars/entities/car.entity';
 import { TuningModule } from './tuning/tuning.module';
 import { Tuning } from './tuning/entities/tuning.entity';
+import { ImageCarModule } from './image-car/image-car.module';
 
 @Module({
   imports: [
@@ -23,7 +24,7 @@ import { Tuning } from './tuning/entities/tuning.entity';
       autoLoadEntities: true
     }),
 
-    CarsModule, ModelModule, TuningModule],
+    CarsModule, ModelModule, TuningModule, ImageCarModule],
   controllers: [],
   providers: [],
 })
