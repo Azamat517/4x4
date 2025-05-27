@@ -8,6 +8,7 @@ import { Car } from './cars/entities/car.entity';
 import { TuningModule } from './tuning/tuning.module';
 import { Tuning } from './tuning/entities/tuning.entity';
 import { ImageCarModule } from './image-car/image-car.module';
+import { ImageCar } from './image-car/entities/image-car.entity';
 
 @Module({
   imports: [
@@ -18,7 +19,7 @@ import { ImageCarModule } from './image-car/image-car.module';
       username: 'root',
       password: 'Aza517097',
       database: '4x4',
-      entities: [Model, Car, Tuning],
+      entities: [Model, Car, Tuning, ImageCar],
       synchronize: true,
       logging: true,
       autoLoadEntities: true
