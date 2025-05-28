@@ -17,6 +17,7 @@ export class CarsService {
     const cars = this.carRepo.create({
       ...createCarDto,
     });
+    
     await this.carRepo.save(cars);
     return cars;
   }

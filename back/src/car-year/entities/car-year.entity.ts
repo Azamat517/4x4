@@ -16,8 +16,7 @@ export class CarYear {
     @Column({ nullable: true })
     carYearId?: number;
 
-
-    @ManyToOne(() => Car, model => model.сarYear)
+    @ManyToOne(() => Car, model => model.carYear)
     @JoinColumn({ name: 'carYearId' })
     car!: Car;
 

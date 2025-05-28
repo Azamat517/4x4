@@ -21,7 +21,7 @@ export class Car {
     models!: Model;
 
     @OneToMany(() => CarYear, сarYear => сarYear.car)
-    сarYear!: CarYear[];
+    carYear!: CarYear[];
 
 }
 

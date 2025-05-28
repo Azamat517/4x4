@@ -22,13 +22,15 @@ export class ModelService {
 
   async findAll(): Promise<Model[]> {
     const models = await this.modelRepo.find({
-      relations: ['carModel.сarYear'],
+      relations: ['carModel.carYear'],
     });
     models.forEach(car => {
       car.carModel.sort((a, b) => a.id - b.id);
+      car.carModel.forEach(model => {
+        model.carYear.sort((a, b) => a.id - b.id);
+      });
     });
     return models;
-
   }
 
   async findOne(id: number): Promise<Model | null> {
