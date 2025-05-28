@@ -12,6 +12,7 @@ import CarModel from './page/carModel'
 import './sass/carModel.sass'
 import './sass/addPage.sass'
 import { AddPage } from './page/addPage'
+import Test from './page/test'
 
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
           <Route path="/Model" element={<Model />} />
           <Route path="/CarModel" element={<CarModel />} />
           <Route path="/AddPage" element={<AddPage />} />
-
+          <Route path="/Test" element={<Test />} />
         </Routes>
         {/* <div className="footer">sadsadasd</div> */}
       </div>
