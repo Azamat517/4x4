@@ -9,6 +9,7 @@ import { TuningModule } from './tuning/tuning.module';
 import { Tuning } from './tuning/entities/tuning.entity';
 import { CarYearModule } from './car-year/car-year.module';
 import { CarYear } from './car-year/entities/car-year.entity';
+import { CarImageModule } from './car-image/car-image.module';
 
 @Module({
   imports: [
@@ -25,7 +26,7 @@ import { CarYear } from './car-year/entities/car-year.entity';
       autoLoadEntities: true
     }),
 
-    CarsModule, ModelModule, TuningModule, CarYearModule],
+    CarsModule, ModelModule, TuningModule, CarYearModule, CarImageModule],
   controllers: [],
   providers: [],
 })
