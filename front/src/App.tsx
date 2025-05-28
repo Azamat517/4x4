@@ -10,6 +10,7 @@ import './sass/model.sass'
 import Model from './page/model'
 import CarModel from './page/carModel'
 import './sass/carModel.sass'
+import './sass/addPage.sass'
 import { AddPage } from './page/addPage'
 
 
