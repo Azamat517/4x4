@@ -1,4 +1,4 @@
-import { ImageCar } from "src/image-car/entities/image-car.entity";
+import { CarYear } from "src/car-year/entities/car-year.entity";
 import { Model } from "src/model/entities/model.entity";
 import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
@@ -20,8 +20,8 @@ export class Car {
     @JoinColumn({ name: 'carId' })
     models!: Model;
 
-    @OneToMany(() => ImageCar, imageCar => imageCar.imageCar)
-    carImage!: ImageCar[];
+    @OneToMany(() => CarYear, сarYear => сarYear.car)
+    сarYear!: CarYear[];
 
 }
 

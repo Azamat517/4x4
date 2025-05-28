@@ -3,17 +3,22 @@ import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "t
 
 
 @Entity()
-export class ImageCar {
+export class CarYear {
     @PrimaryGeneratedColumn()
     id: number
 
     @Column()
-    image: string
+    car_year: string
+
+    @Column()
+    body_number: string
 
     @Column({ nullable: true })
-    carImageId?: number;
+    carYearId?: number;
 
-    @ManyToOne(() => Car, car => car.carImage)
-    @JoinColumn({ name: 'carImageId' })
-    imageCar!: Car;
+
+    @ManyToOne(() => Car, model => model.сarYear)
+    @JoinColumn({ name: 'carYearId' })
+    car!: Car;
+
 }
