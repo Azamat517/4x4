@@ -1,0 +1,60 @@
+.imageCar
+    width: 100%
+    height: auto
+    display: flex
+    justify-content: center
+    &__box
+        width: 150vh
+        height: auto
+        margin-top: 1rem
+        border-radius: 20px   
+    &__box__box-name
+        width: 100%
+        height: 5rem  
+        align-content: center
+        padding-left: 1rem
+        font-weight: bold
+        font-size: 2rem
+        font-family: Arial, Helvetica, sans-serif
+        @media (max-width: 430px)
+            font-size: 7vw
+            height: 15vw
+    &__box__year
+        width: 100%
+        height: 2rem 
+        display: flex
+        align-items: center
+        padding-left: 1rem
+        font-family: Arial, Helvetica, sans-serif
+        font-weight: bold
+        @media (max-width: 430px)
+            font-size: 0.8rem
+    &__box__info
+        width: 100%
+        height: 2rem
+        padding-left: 1rem
+        display: flex
+        align-items: center
+        font-family: Arial, Helvetica, sans-serif
+        @media (max-width: 430px)
+            font-size: 0.8rem 
+    &__box__info__number
+        margin-left: 0.5rem      
+    &__box-image
+        width: 100%
+        height: auto
+        flex-wrap: wrap
+        display: flex   
+        justify-content: center  
+        gap: 1rem 
+    &__box-image__image
+        width: 15rem
+        height: 17rem
+        object-fit: cover
+        @media (max-width: 1000px)
+            width: 12rem
+            height: 13rem
+            margin-bottom: 1rem
+        @media (max-width: 665px)
+            width: 10rem
+            height: 8rem

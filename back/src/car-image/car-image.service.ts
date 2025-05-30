@@ -16,10 +16,6 @@ export class CarImageService {
     return `This action returns a #${id} carImage`;
   }
 
-  update(id: number, updateCarImageDto: UpdateCarImageDto) {
-    return `This action updates a #${id} carImage`;
-  }
-
   remove(id: number) {
     return `This action removes a #${id} carImage`;
   }

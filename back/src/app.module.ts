@@ -10,6 +10,7 @@ import { Tuning } from './tuning/entities/tuning.entity';
 import { CarYearModule } from './car-year/car-year.module';
 import { CarYear } from './car-year/entities/car-year.entity';
 import { CarImageModule } from './car-image/car-image.module';
+import { CarImage } from './car-image/entities/car-image.entity';
 
 @Module({
   imports: [
@@ -20,7 +21,7 @@ import { CarImageModule } from './car-image/car-image.module';
       username: 'root',
       password: 'Aza517097',
       database: '4x4',
-      entities: [Model, Car, Tuning, CarYear],
+      entities: [Model, Car, Tuning, CarYear,CarImage],
       synchronize: true,
       logging: true,
       autoLoadEntities: true

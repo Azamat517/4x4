@@ -22,6 +22,8 @@ const Body = () => {
     const navigate = useNavigate();
 
     return (
+
+ 
         <div className="body">
             <div className="body__box">
                 <div className="body__box__home">

@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 const CarModel = () => {
@@ -6,6 +6,9 @@ const CarModel = () => {
     const location = useLocation();
     const carInfo = location.state;
     const carModels = carInfo?.carModel || [];
+
+    const navigate = useNavigate();
+
     return (
         <div>
             <div className="carModel">
@@ -20,12 +23,14 @@ const CarModel = () => {
                     </div>
                     <div>
                         <div className="carModel__box-model">{carModels.map((carModel: any) => (
-                            <div className="carModel__box-model__cars" key={carModel.id}>
+                            <button onClick={() => navigate('/ImageCar', { state: carModel })}
+                                className="carModel__box-model__cars" key={carModel.id}>
                                 <div className="carModel__box-mode__name">{carModel.name_car}</div>
                                 <img className="carModel__box-model__image" src={carModel.image} alt="image" />
-                            </div>
+                            </button>
                         ))}</div>
                     </div>
+                
                 </div>
             </div>
         </div>

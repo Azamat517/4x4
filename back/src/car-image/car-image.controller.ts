@@ -22,10 +22,6 @@ export class CarImageController {
     return this.carImageService.findOne(+id);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateCarImageDto: UpdateCarImageDto) {
-    return this.carImageService.update(+id, updateCarImageDto);
-  }
 
   @Delete(':id')
   remove(@Param('id') id: string) {

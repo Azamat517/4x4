@@ -1,5 +1,6 @@
+import { CarImage } from "src/car-image/entities/car-image.entity";
 import { Car } from "src/cars/entities/car.entity";
-import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 
 @Entity()
@@ -19,5 +20,8 @@ export class CarYear {
     @ManyToOne(() => Car, model => model.carYear)
     @JoinColumn({ name: 'carYearId' })
     car!: Car;
+
+    @OneToMany(() => CarImage, carImage => carImage.carImage)
+    carModelImage!: CarImage[];
 
 }

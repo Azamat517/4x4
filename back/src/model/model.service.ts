@@ -22,7 +22,7 @@ export class ModelService {
 
   async findAll(): Promise<Model[]> {
     const models = await this.modelRepo.find({
-      relations: ['carModel.carYear'],
+      relations: ['carModel.carYear.carModelImage'],
     });
     models.forEach(car => {
       car.carModel.sort((a, b) => a.id - b.id);
