@@ -4,8 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import type { AppDispatch } from "../redux/store";
 
 
-
-
 export const AddPage = () => {
 
     const dispatch = useDispatch<AppDispatch>();
@@ -81,8 +79,8 @@ export const AddPage = () => {
                         <input className="addPage__inp-box__inp-car__inp" value={carMake}
                             onChange={(e) => setCarMake(e.target.value)} type="text" disabled />
                     </div>
-                    <div className="addPage__inp-box__inp-car">
-                        <div className="addPage__inp-box__inp-car__name">ID машины</div>
+                    <div className="addPage__inp-box__inp-car" >
+                        <div className="addPage__inp-box__inp-car__name" >ID машины</div>
                         <input className="addPage__inp-box__inp-car__inp" value={carID}
                             onChange={(e) => setID(e.target.value)} type="text" disabled />
                     </div>
@@ -101,7 +99,7 @@ export const AddPage = () => {
                         <input className="addPage__inp-box__inp-car__inp" value={carYearID}
                             onChange={(e) => setYearID(e.target.value)} type="text" disabled />
                     </div>
-                    <div className="addPage__inp-box__inp-car">
+                    <div className="addPage__inp-box__inp-car" >
                         <div className="addPage__inp-box__inp-car__name"> Загрузка картинки</div>
                         <input   type="file" />
                     </div>

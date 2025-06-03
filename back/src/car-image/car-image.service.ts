@@ -1,22 +1,50 @@
 import { Injectable } from '@nestjs/common';
 import { CreateCarImageDto } from './dto/create-car-image.dto';
-import { UpdateCarImageDto } from './dto/update-car-image.dto';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { CarImage } from './entities/car-image.entity';
 
 @Injectable()
 export class CarImageService {
-  create(createCarImageDto: CreateCarImageDto) {
-    return 'This action adds a new carImage';
+
+  constructor(
+    @InjectRepository(CarImage) private readonly imageRepo: Repository<CarImage>,
+  ) { }
+
+
+  async create(createCarImageDto: CreateCarImageDto, imageFilename?: string,): Promise<CarImage> {
+    const images = this.imageRepo.create({
+      ...createCarImageDto,
+      image: imageFilename ?? createCarImageDto.image,
+
+    });
+    await this.imageRepo.save(images);
+    return images;
   }
 
-  findAll() {
-    return `This action returns all carImage`;
+  async findAll(): Promise<CarImage[]> {
+    return await this.imageRepo.find()
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} carImage`;
+  async findOne(id: number): Promise<CarImage | null> {
+    return await this.imageRepo.findOneBy({ id: id });
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} carImage`;
+
+  async remove(id: number) {
+    await this.imageRepo.delete({ id });
+    return id;
+  }
+
+
+  async clear() {
+    try {
+      const isEmpty = await this.imageRepo.countBy({});
+      if (isEmpty) {
+        await this.imageRepo.delete({});
+      }
+    } catch {
+      throw new Error('Clear error');
+    }
   }
 }
