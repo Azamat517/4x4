@@ -13,7 +13,7 @@ const ImageCar = () => {
             <div>{carModel.name_car}</div>
           </div>
           <div>{carModel.carYear.map((year: any) => (
-            <div  key={year.id}>
+            <div key={year.id}>
               <div className="imageCar__box__year">{year.car_year}</div>
               <div className="imageCar__box__info">
                 <div>{carModel.name_car}</div>
@@ -21,7 +21,10 @@ const ImageCar = () => {
               </div>
               <div className="imageCar__box-image"> {year.carModelImage.map((img: any) => (
                 <div key={img.id}>
-                  <img className="imageCar__box-image__image" src={img.image} alt="image" />
+                  <img className="imageCar__box-image__image"
+                    src={img.image.startsWith('http') ? img.image
+                      : `http://localhost:3000/uploads/${img.image}`} alt="image" />
+
                 </div>
               ))}</div>
             </div>
