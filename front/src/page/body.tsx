@@ -12,7 +12,6 @@ const Body = () => {
     const cars = useSelector(model);
     const tun = useSelector(tuning);
 
-
     useEffect(() => {
         dispatch(getModel());
         dispatch(getTuning());
@@ -23,13 +22,25 @@ const Body = () => {
 
     return (
         <div className="body">
+
+
             <div className="body__box">
                 <div className="body__box__home">
                     <div >
                         <div className="body__box__home__name">4X4</div>
-
-                        <img className="body__box__home__image" src={'src/assets/1.jpg'} alt="image" />
-
+                        <div>
+                            {cars.carInfo[0] && (
+                                <div>
+                                    {cars.carInfo[0].carModel.length > 0 && (
+                                        (() => {
+                                            const randomModelIndex = Math.floor(Math.random() * cars.carInfo[0].carModel.length);
+                                            const model = cars.carInfo[0].carModel[randomModelIndex];
+                                            return <img className="body__box__home__image" src={model.image} alt='image' />;
+                                        })()
+                                    )}
+                                </div>
+                            )}
+                        </div>
                     </div>
                     <div>
                         <div className="tuning">

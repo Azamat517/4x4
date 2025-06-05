@@ -13,7 +13,6 @@ import './sass/carModel.sass'
 import './sass/imageCar.sass'
 import './sass/addPage.sass'
 import { AddPage } from './page/addPage'
-import Test from './page/test'
 import ImageCar from './page/imageCar'
 
 
@@ -39,7 +38,6 @@ function App() {
           <Route path="/Model" element={<Model />} />
           <Route path="/CarModel" element={<CarModel />} />
           <Route path="/AddPage" element={<AddPage />} />
-          <Route path="/Test" element={<Test />} />
           <Route path="/ImageCar" element={<ImageCar />} />
 
           

@@ -124,12 +124,12 @@ export const AddPage = () => {
                             onChange={(e) => setCarModel(e.target.value)} type="text" disabled />
                     </div>
                     <div className="addPage__inp-box__inp-car">
-                        <div className="addPage__inp-box__inp-car__name">Год выуска</div>
+                        <div className="addPage__inp-box__inp-car__name">Год выпуска</div>
                         <input className="addPage__inp-box__inp-car__inp" value={carModelYear}
                             onChange={(e) => setCarModelYear(e.target.value)} type="text" disabled />
                     </div>
                     <div className="addPage__inp-box__inp-car" style={{display: 'none'}}>
-                        <div className="addPage__inp-box__inp-car__name" > ID Год выуска</div>
+                        <div className="addPage__inp-box__inp-car__name" > ID Год выпуска</div>
                         <input className="addPage__inp-box__inp-car__inp" value={carYearID}
                             onChange={(e) => setYearID(e.target.value)} type="text" disabled />
                     </div>
