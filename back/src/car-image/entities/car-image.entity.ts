@@ -10,6 +10,8 @@ export class CarImage {
     @Column()
     image: string
 
+
+
     @Column({ nullable: true })
     carImageId?: number;
 

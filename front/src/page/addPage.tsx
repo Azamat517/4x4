@@ -56,7 +56,6 @@ export const AddPage = () => {
 
     function models() {
         setTest(!test);
-        
     }
 
     function year() {

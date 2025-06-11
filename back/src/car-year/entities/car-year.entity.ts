@@ -13,6 +13,9 @@ export class CarYear {
 
     @Column()
     body_number: string
+    
+    @Column()
+    description: string
 
     @Column({ nullable: true })
     carYearId?: number;
